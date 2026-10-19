@@ -373,6 +373,191 @@
   @media print {
     .figure { border-color: #bbb !important; background: #fff !important; page-break-inside: avoid; }
   }
+
+  /* ==================== ENHANCED RESPONSIVE / MEDIA QUERY ADDITIONS ==================== */
+
+  /* Tablet and below: give the hero room for the fixed toggle button */
+  @media (max-width: 1024px) {
+    .hero { padding-top: 4.4rem; }
+  }
+
+  /* Tablet portrait / large phone landscape */
+  @media (max-width: 900px) {
+    .hero { padding-top: 4.4rem; }
+    .content { padding: 1.8rem 1.6rem 2.5rem; }
+    .meta-grid { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: .8rem; }
+    .figure svg { max-width: 100%; }
+    .flowchart { padding: .9rem; }
+  }
+
+  /* Small tablet / phone landscape */
+  @media (max-width: 768px) {
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.4rem; }
+    h3 { font-size: 1.18rem; }
+    h4 { font-size: 1.02rem; }
+    .hero h1 { font-size: clamp(1.4rem, 4.8vw, 2rem); }
+    .hero .subtitle { font-size: .98rem; }
+    .hero .meta { gap: .4rem .8rem; font-size: .82rem; }
+    .hero .meta span { padding: .3em .7em; }
+    .hero .btn-pdf { padding: .6em 1.2em; font-size: .9rem; }
+    .unit-banner { padding: 1.2rem 1.3rem; margin: 2rem 0 1.2rem; }
+    .unit-banner h2 { font-size: 1.22rem; }
+    .unit-banner p { font-size: .9rem; }
+    .two-col { grid-template-columns: 1fr; gap: .9rem; }
+    pre { font-size: .82rem; padding: 1rem; }
+    .flowchart { max-width: 100%; }
+    .fc-node { min-width: 130px; font-size: .85rem; }
+    .fc-decision { min-width: 165px; padding: 1.2rem 1.6rem; font-size: .8rem; }
+    .figure { padding: .5rem .5rem .3rem; }
+    .figure figcaption { font-size: .8rem; }
+    table { font-size: .85rem; }
+    th, td { padding: .5rem .6rem; }
+    .review-box { padding: .9rem 1.1rem; }
+    .quiz-question { padding: .9rem 1rem; }
+  }
+
+  /* Phone portrait */
+  @media (max-width: 600px) {
+    body { font-size: 15.5px; line-height: 1.65; }
+    .hero { padding: 4.6rem 1rem 2rem; }
+    .hero .meta { display: flex; flex-direction: column; align-items: center; }
+    .content { padding: 1.2rem 1rem 2rem; border-radius: 8px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.28rem; margin-top: 1.8em; }
+    h3 { font-size: 1.08rem; }
+    h4 { font-size: .98rem; }
+    pre { font-size: .76rem; padding: .8rem; border-radius: 6px; }
+    pre .lang-tag { font-size: .6rem; padding: .15rem .5rem; }
+    code { font-size: .84em; }
+    .callout { padding: .75rem .9rem; font-size: .92rem; }
+    .callout .label { font-size: .68rem; }
+    .meta-grid { grid-template-columns: 1fr; gap: .7rem; }
+    .meta-card { padding: .8rem .9rem; }
+    .meta-card h5 { font-size: .76rem; }
+    .meta-card p { font-size: .9rem; }
+    .review-box { padding: .8rem 1rem; }
+    .review-box h4 { font-size: .95rem; }
+    .quiz-question { padding: .8rem .9rem; }
+    .quiz-options li { padding: .5rem .7rem; font-size: .88rem; }
+    .flowchart { padding: .7rem; gap: .3rem; }
+    .fc-node { min-width: 115px; font-size: .8rem; padding: .45rem .8rem; }
+    .fc-branch { gap: 1.2rem; }
+    .fc-branch .branch-label { font-size: .68rem; }
+    .figure { padding: .4rem; border-radius: 8px; }
+    .figure figcaption { font-size: .77rem; }
+    .formula { font-size: .8rem; padding: .7rem .9rem; }
+    .chapter-badge { font-size: .65rem; padding: .22em .7em; }
+    .unit-banner { padding: 1rem 1rem; border-radius: 8px; }
+    .unit-banner h2 { font-size: 1.08rem; }
+    .unit-banner p { font-size: .86rem; }
+    .search-results { max-height: 200px; }
+    .search-results .sr-item { padding: .4rem .6rem; }
+    #toTop, #pdfBtn { width: 42px; height: 42px; font-size: 1rem; right: 1rem; }
+    #toTop { bottom: 1rem; }
+    #pdfBtn { bottom: 4.2rem; }
+    #menuToggle { width: 44px; height: 44px; font-size: 1.2rem; top: .7rem; left: .7rem; }
+    .table-wrap { margin: 1rem 0; border: 1px solid var(--border); border-radius: 6px; }
+    th, td { padding: .4rem .5rem; font-size: .8rem; }
+    th { font-size: .76rem; }
+  }
+
+  /* Small phone */
+  @media (max-width: 480px) {
+    body { font-size: 15px; }
+    .hero { padding: 4rem .8rem 1.8rem; }
+    .hero h1 { font-size: 1.35rem; letter-spacing: 0; }
+    .hero .subtitle { font-size: .9rem; }
+    .hero .meta { font-size: .76rem; }
+    .hero .meta span { font-size: .76rem; padding: .28em .65em; }
+    .content { padding: 1rem .8rem 1.5rem; }
+    h1 { font-size: 1.32rem; }
+    h2 { font-size: 1.13rem; padding-bottom: .25em; }
+    h3 { font-size: .98rem; }
+    h4 { font-size: .92rem; }
+    p { font-size: .95rem; }
+    ul, ol { padding-left: 1.2em; }
+    pre { font-size: .7rem; padding: .7rem; }
+    pre code { font-size: .7rem; }
+    .callout { padding: .6rem .8rem; font-size: .88rem; }
+    .callout .label { font-size: .63rem; letter-spacing: .06em; }
+    .meta-grid { gap: .5rem; }
+    .meta-card { padding: .7rem .8rem; }
+    .quiz-question { padding: .7rem .8rem; }
+    .quiz-options li { padding: .45rem .6rem; font-size: .84rem; }
+    .flowchart { padding: .55rem; }
+    .fc-node { min-width: 100px; font-size: .74rem; padding: .4rem .65rem; }
+    .fc-decision { min-width: 135px; padding: 1rem 1.2rem; font-size: .73rem; }
+    .fc-branch { gap: .9rem; }
+    .table-wrap { margin: .8rem 0; }
+    th, td { padding: .32rem .42rem; font-size: .76rem; }
+    th { font-size: .7rem; }
+    .figure figcaption { font-size: .74rem; }
+    .unit-banner { padding: .9rem .8rem; }
+    .unit-banner h2 { font-size: .98rem; }
+    .unit-banner p { font-size: .8rem; }
+    #toTop, #pdfBtn { width: 38px; height: 38px; font-size: .9rem; right: .8rem; }
+    #toTop { bottom: .8rem; }
+    #pdfBtn { bottom: 3.8rem; }
+    #menuToggle { width: 40px; height: 40px; font-size: 1.1rem; top: .6rem; left: .6rem; }
+    .search-toggle { font-size: .78rem; padding: .5rem .65rem; }
+    .search-input-wrap input { font-size: .78rem; padding: .5rem .7rem .5rem 2rem; }
+    .search-results .sr-title { font-size: .74rem; }
+    .search-results .sr-snippet { font-size: .7rem; }
+    .formula { font-size: .76rem; padding: .6rem .8rem; }
+    footer { padding: 1.8rem .8rem; font-size: .84rem; }
+  }
+
+  /* Very small phone (≤360px) */
+  @media (max-width: 360px) {
+    .hero h1 { font-size: 1.18rem; }
+    .content { padding: .8rem .6rem 1.2rem; }
+    pre { font-size: .66rem; padding: .6rem; }
+    .fc-node { min-width: 88px; font-size: .7rem; padding: .35rem .55rem; }
+    .fc-decision { min-width: 118px; padding: .9rem 1rem; font-size: .68rem; }
+    .fc-branch { gap: .8rem; }
+    th, td { padding: .28rem .35rem; font-size: .72rem; }
+    #menuToggle { width: 38px; height: 38px; font-size: 1rem; }
+    #toTop, #pdfBtn { width: 36px; height: 36px; font-size: .85rem; }
+    .meta-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Landscape phone */
+  @media (max-height: 500px) and (max-width: 900px) {
+    .toc { max-height: 100vh; overflow-y: auto; }
+  }
+
+  /* Large screens */
+  @media (min-width: 1600px) {
+    .layout { max-width: 1600px; }
+    .content { max-width: 1100px; }
+    body { font-size: 17px; }
+  }
+
+  /* Touch devices — larger tap targets */
+  @media (hover: none) and (pointer: coarse) {
+    .quiz-options li { padding: .65rem .8rem; }
+    .search-toggle { min-height: 44px; }
+    .toc a { min-height: 40px; display: flex; align-items: center; }
+    #menuToggle, #toTop, #pdfBtn { min-width: 44px; min-height: 44px; }
+    .search-input-wrap input { min-height: 44px; }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Extended print rules */
+  @media print {
+    .figure, .callout, .quiz-question, pre, table { page-break-inside: avoid; }
+    .search-box, .search-toggle, .search-panel { display: none !important; }
+  }
 </style>
 </head>
 <body>
